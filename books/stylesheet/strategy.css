@@ -1,0 +1,175 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #464646;
+  user-select: none;
+  color: #c8c6c4;
+}
+
+.home-nav{
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.rules-nav{
+  position: absolute;
+  top: 10px;
+  left: 105px;
+}
+
+@media (min-width: 0px){
+/* Main Grid Container (Mobile) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 40vw 20vw 40vw;
+  grid-template-rows: 105px 50vw 50vw 50vw;
+  
+  grid-template-areas: 
+    "nav nav nav"
+    "Strategy1Img Strategy1Info Strategy1Info"
+    "Strategy2Info Strategy2Info Strategy2Img"
+    "Strategy3Img Strategy3Info Strategy3Info";
+}
+
+.title{
+  font-size: 5.5vw;
+}
+
+.info{
+  font-size: 3.5vw;
+  width: 60vw
+}
+}
+
+@media (min-width: 750px){
+/* Main Grid Container (Desktop) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  grid-template-rows: 105px 25vw 25vw 25vw;
+  
+  grid-template-areas: 
+    "nav nav nav nav"
+    "Strategy1Img Strategy1Info Strategy1Info Strategy1Info"
+    "Strategy2Info Strategy2Info Strategy2Info Strategy2Img"
+    "Strategy3Img Strategy3Info Strategy3Info Strategy3Info";
+}
+
+.title{
+  font-size: 4vw;
+}
+
+.info{
+  font-size: 2.5vw;
+  width: 75vw;
+}
+}
+  
+/* Nav Grids */
+.nav {
+  grid-area: nav;
+}
+
+/* Strategy 1 Grids */
+.Strategy1Img {
+  grid-area: Strategy1Img;
+}
+.Strategy1Info {
+  grid-area: Strategy1Info;
+}
+
+/* Strategy 2 Grids */
+.Strategy2Info {
+  grid-area: Strategy2Info;
+}
+.Strategy2Img {
+  grid-area: Strategy2Img;
+}
+
+/* Strategy 3 Grids */
+.Strategy3Img {
+  grid-area: Strategy3Img;
+}
+.Strategy3Info {
+  grid-area: Strategy3Info;
+}
+
+
+
+
+/* Strategy 1 Cycle */
+#strategy1Control {
+  display: none;
+}
+.strategy1 {
+  width: 90%;
+  height: width;
+  content: url(../Example.png);
+  border: none;
+  display: block;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.strategy1:active {
+  width: 90%;
+  height: width;
+  content: url(../../piecesmove/KingMoves.png);
+}
+#strategy1Control:checked + label {
+  width: 90%;
+  height: width;
+  content: url(../../piecesmove/KnightMoves.png);
+}
+
+
+
+/* Strategy 2 Cycle */
+#strategy2Control {
+  display: none;
+}
+.strategy2 {
+  width: 90%;
+  height: width;
+  content: url(../Example.png);
+  border: none;
+  display: block;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.strategy2:active {
+  width: 90%;
+  height: width;
+  content: url(../../piecesmove/KingMoves.png);
+}
+#strategy2Control:checked + label {
+  width: 90%;
+  height: width;
+  content: url(../../piecesmove/KnightMoves.png);
+}
+
+
+
+/* Strategy 3 Cycle */
+#strategy3Control {
+  display: none;
+}
+.strategy3 {
+  width: 90%;
+  height: width;
+  content: url(../Example.png);
+  border: none;
+  display: block;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.strategy3:active {
+  width: 90%;
+  height: width;
+  content: url(../../piecesmove/KingMoves.png);
+}
+#strategy3Control:checked + label {
+  width: 90%;
+  height: width;
+  content: url(../../piecesmove/KnightMoves.png);
+}
