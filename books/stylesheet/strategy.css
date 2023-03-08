@@ -1,0 +1,173 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #464646;
+  user-select: none;
+  color: #c8c6c4;
+}
+
+.home-nav{
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.rules-nav{
+  position: absolute;
+  top: 10px;
+  left: 105px;
+}
+
+
+
+@media (min-width: 0px){
+/* Main Grid Container (Mobile) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 40vw 20vw 40vw;
+  grid-template-rows: 105px 50vw 50vw 50vw;
+  
+  grid-template-areas: 
+    "nav nav nav"
+    "Strategy1Img Strategy1Info Strategy1Info"
+    "Strategy2Info Strategy2Info Strategy2Img"
+    "Strategy3Img Strategy3Info Strategy3Info";
+}
+
+.title{
+  font-size: 5.5vw;
+}
+.info{
+  font-size: 3.5vw;
+  width: 60vw
+}
+}
+
+
+
+@media (min-width: 750px){
+/* Main Grid Container (Desktop) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  grid-template-rows: 105px 25vw 25vw 25vw;
+  
+  grid-template-areas: 
+    "nav nav nav nav"
+    "Strategy1Img Strategy1Info Strategy1Info Strategy1Info"
+    "Strategy2Info Strategy2Info Strategy2Info Strategy2Img"
+    "Strategy3Img Strategy3Info Strategy3Info Strategy3Info";
+}
+
+.title{
+  font-size: 4vw;
+}
+.info{
+  font-size: 2.5vw;
+  width: 75vw;
+}
+}
+  
+/* Nav Grids */
+.nav {
+  grid-area: nav;
+}
+
+/* Strategy 1 Grids */
+.Strategy1Img {
+  grid-area: Strategy1Img;
+}
+.Strategy1Info {
+  grid-area: Strategy1Info;
+}
+
+/* Strategy 2 Grids */
+.Strategy2Info {
+  grid-area: Strategy2Info;
+}
+.Strategy2Img {
+  grid-area: Strategy2Img;
+}
+
+/* Strategy 3 Grids */
+.Strategy3Img {
+  grid-area: Strategy3Img;
+}
+.Strategy3Info {
+  grid-area: Strategy3Info;
+}
+
+
+
+/* Strategy 1 Cycle */
+.Strategy1Cycle.Strategy1-1,
+.Strategy1Cycle[data-state="1"] {
+  content: url("../../../../piecesmove/BishopMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy1Cycle.Strategy1-2,
+.Strategy1Cycle[data-state="2"] {
+  content: url("../../../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy1Cycle.Strategy1-3,
+.Strategy1Cycle[data-state="3"] {
+  content: url("../../../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Strategy 2 Cycle */
+.Strategy2Cycle.Strategy2-1,
+.Strategy2Cycle[data-state="1"] {
+  content: url("../../piecesmove/BishopMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy2Cycle.Strategy2-2,
+.Strategy2Cycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy2Cycle.Strategy2-3,
+.Strategy2Cycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Strategy 3 Cycle */
+.Strategy3Cycle.Strategy3-1,
+.Strategy3Cycle[data-state="1"] {
+  content: url("../../piecesmove/BishopMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy3Cycle.Strategy3-2,
+.CStrategy3Cycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy3Cycle.Strategy3-3,
+.Strategy3Cycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
