@@ -1,0 +1,43 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #464646;
+  user-select: none;
+}
+
+div.main-container{
+  position: relative;
+  top: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+div.home-nav{
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 85px;
+}
+
+div.rules-nav{
+  position: absolute;
+  top: 85px;
+  left: -5px;
+  width: 85px;
+}
+
+div.strategy-nav{
+  position: absolute;
+  top: 175px;
+  left: -12px;
+  width: 85px;
+}
+
+div.chessai{
+  position: relative;
+  top: -5px;
+  display: block;
+  width: calc( 100% - 90px );
+  height: calc( 100vh - 23px );
+  margin-left: auto;
+}
