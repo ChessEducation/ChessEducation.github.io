@@ -1,0 +1,483 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #464646;
+  user-select: none;
+  color: #c8c6c4;
+}
+
+.divider{
+  border: 2px solid #c8c6c4;
+  border-radius: 5px;
+  width: 95%;
+  margin: auto;
+}
+
+
+
+@media (min-width: 0px){
+/* Main Grid Container (Mobile) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 40vw 20vw 40vw;
+  grid-template-rows: 15vw;
+  row-gap: 3vw;
+  
+  grid-template-areas: 
+    "nav nav nav"
+    "PageTitle PageTitle PageTitle"
+    "TitleDivider TitleDivider TitleDivider"
+    "Strategy1Img Strategy1Info Strategy1Info"
+    "Strategy2Info Strategy2Info Strategy2Img"
+    "Strategy3Img Strategy3Info Strategy3Info"
+    "Strategy4Info Strategy4Info Strategy4Img"
+    "Strategy5Img Strategy5Info Strategy5Info"
+    "Strategy6Info Strategy6Info Strategy6Img"
+    "Strategy7Img Strategy7Info Strategy7Info"
+    "Strategy8Info Strategy8Info Strategy8Img"
+    "Strategy9Img Strategy9Info Strategy9Info"
+    "Strategy10Info Strategy10Info Strategy10Img";
+}
+
+.home-nav{
+  position: relative;
+  top: 10px;
+  left: 10px;
+  height: calc(15vw - 5px);
+}
+
+.rules-nav{
+  position: relative;
+  top: 10px;
+  left: 20px;
+  height: calc(15vw - 5px);
+}
+  
+.title{
+  font-size: 5.5vw;
+}
+  
+.info{
+  font-size: 3.5vw;
+  width: 60vw
+}
+  
+.strategy{
+  font-size: 9vw;
+}
+}
+
+
+
+@media (min-width: 750px){
+/* Main Grid Container (Desktop) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  grid-template-rows: 10vw;
+  
+  grid-template-areas: 
+    "nav nav nav nav"
+    "PageTitle PageTitle PageTitle PageTitle"
+    "TitleDivider TitleDivider TitleDivider TitleDivider"
+    "Strategy1Img Strategy1Info Strategy1Info Strategy1Info"
+    "Strategy2Info Strategy2Info Strategy2Info Strategy2Img"
+    "Strategy3Img Strategy3Info Strategy3Info Strategy3Info"
+    "Strategy4Info Strategy4Info Strategy4Info Strategy4Img"
+    "Strategy5Img Strategy5Info Strategy5Info Strategy5Info"
+    "Strategy6Info Strategy6Info Strategy6Info Strategy6Img"
+    "Strategy7Img Strategy7Info Strategy7Info Strategy7Info"
+    "Strategy8Info Strategy8Info Strategy8Info Strategy8Img"
+    "Strategy9Img Strategy9Info Strategy9Info Strategy9Info"
+    "Strategy10Info Strategy10Info Strategy10Info Strategy10Img";
+}
+
+.home-nav{
+  height: calc(10vw - 20px);
+}
+
+.rules-nav{
+  height: calc(10vw - 20px);
+}
+
+.title{
+  font-size: 4vw;
+}
+  
+.info{
+  font-size: 2.5vw;
+  width: 75vw;
+}
+  
+.strategy{
+  font-size: 7vw;
+}
+}
+  
+/* Nav Grids */
+.nav {
+  grid-area: nav;
+}
+
+/* Title Grids */
+.PageTitle {
+  grid-area: PageTitle;
+  text-align: center;
+  margin: auto;
+}
+
+/* Title Divider Grids */
+.TitleDivider {
+  grid-area: TitleDivider;
+}
+
+/* Strategy 1 Grids */
+.Strategy1Img {
+  grid-area: Strategy1Img;
+  align-self: center;
+}
+.Strategy1Info {
+  grid-area: Strategy1Info;
+  align-self: center;
+}
+
+/* Strategy 2 Grids */
+.Strategy2Info {
+  grid-area: Strategy2Info;
+  align-self: center;
+}
+.Strategy2Img {
+  grid-area: Strategy2Img;
+  align-self: center;
+}
+
+/* Strategy 3 Grids */
+.Strategy3Img {
+  grid-area: Strategy3Img;
+  align-self: center;
+}
+.Strategy3Info {
+  grid-area: Strategy3Info;
+  align-self: center;
+}
+
+/* Strategy 4 Grids */
+.Strategy4Img {
+  grid-area: Strategy4Img;
+  align-self: center;
+}
+.Strategy4Info {
+  grid-area: Strategy4Info;
+  align-self: center;
+}
+
+/* Strategy 5 Grids */
+.Strategy5Img {
+  grid-area: Strategy5Img;
+  align-self: center;
+}
+.Strategy5Info {
+  grid-area: Strategy5Info;
+  align-self: center;
+}
+
+/* Strategy 6 Grids */
+.Strategy6Img {
+  grid-area: Strategy6Img;
+  align-self: center;
+}
+.Strategy6Info {
+  grid-area: Strategy6Info;
+  align-self: center;
+}
+
+/* Strategy 7 Grids */
+.Strategy7Img {
+  grid-area: Strategy7Img;
+  align-self: center;
+}
+.Strategy7Info {
+  grid-area: Strategy7Info;
+  align-self: center;
+}
+
+/* Strategy 8 Grids */
+.Strategy8Img {
+  grid-area: Strategy8Img;
+  align-self: center;
+}
+.Strategy8Info {
+  grid-area: Strategy8Info;
+  align-self: center;
+}
+
+/* Strategy 9 Grids */
+.Strategy9Img {
+  grid-area: Strategy9Img;
+  align-self: center;
+}
+.Strategy9Info {
+  grid-area: Strategy9Info;
+  align-self: center;
+}
+
+/* Strategy 10 Grids */
+.Strategy10Img {
+  grid-area: Strategy10Img;
+  align-self: center;
+}
+.Strategy10Info {
+  grid-area: Strategy10Info;
+  align-self: center;
+}
+
+
+
+
+/* Strategy 1 Cycle */
+.Strategy1Cycle.Strategy1-1,
+.Strategy1Cycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy1Cycle.Strategy1-2,
+.Strategy1Cycle[data-state="2"] {
+  content: url("../../../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy1Cycle.Strategy1-3,
+.Strategy1Cycle[data-state="3"] {
+  content: url("../../../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Strategy 2 Cycle */
+.Strategy2Cycle.Strategy2-1,
+.Strategy2Cycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy2Cycle.Strategy2-2,
+.Strategy2Cycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy2Cycle.Strategy2-3,
+.Strategy2Cycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Strategy 3 Cycle */
+.Strategy3Cycle.Strategy3-1,
+.Strategy3Cycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy3Cycle.Strategy3-2,
+.CStrategy3Cycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy3Cycle.Strategy3-3,
+.Strategy3Cycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Strategy 4 Cycle */
+.Strategy4Cycle.Strategy4-1,
+.Strategy4Cycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy4Cycle.Strategy4-2,
+.CStrategy4Cycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy4Cycle.Strategy4-3,
+.Strategy4Cycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Strategy 5 Cycle */
+.Strategy5Cycle.Strategy5-1,
+.Strategy5Cycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy5Cycle.Strategy5-2,
+.Strategy5Cycle[data-state="2"] {
+  content: url("../../piecesmove/RookMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy5Cycle.Strategy5-3,
+.Strategy5Cycle[data-state="3"] {
+  content: url("../../piecesmove/PawnMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Strategy 6 Cycle */
+.Strategy6Cycle.Strategy6-1,
+.Strategy6Cycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy6Cycle.Strategy6-2,
+.Strategy6Cycle[data-state="2"] {
+  content: url("../../piecesmove/PawnMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy6Cycle.Strategy6-3,
+.Strategy6Cycle[data-state="3"] {
+  content: url("../../piecesmove/BishopMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Strategy 7 Cycle */
+.Strategy7Cycle.Strategy7-1,
+.Strategy7Cycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy7Cycle.Strategy7-2,
+.Strategy7Cycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy7Cycle.Strategy7-3,
+.Strategy7Cycle[data-state="3"] {
+  content: url("../../piecesmove/PawnMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Strategy 8 Cycle */
+.Strategy8Cycle.Strategy8-1,
+.Strategy8Cycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy8Cycle.Strategy8-2,
+.Strategy8Cycle[data-state="2"] {
+  content: url("../../piecesmove/BishopMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy8Cycle.Strategy8-3,
+.Strategy8Cycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Strategy 9 Cycle */
+.Strategy9Cycle.Strategy9-1,
+.Strategy9Cycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy9Cycle.Strategy9-2,
+.CStrategy9Cycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy9Cycle.Strategy9-3,
+.Strategy9Cycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Strategy 10 Cycle */
+.Strategy10Cycle.Strategy10-1,
+.Strategy10Cycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy10Cycle.Strategy10-2,
+.CStrategy10Cycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.Strategy10Cycle.Strategy10-3,
+.Strategy10Cycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}

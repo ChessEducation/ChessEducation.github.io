@@ -1,0 +1,426 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #464646;
+  user-select: none;
+  color: #c8c6c4;
+}
+
+.divider{
+  border: 2px solid #c8c6c4;
+  border-radius: 5px;
+  width: 95%;
+  margin: auto;
+}
+
+
+
+@media (min-width: 0px){
+/* Main Grid Container (Mobile) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 40vw 20vw 40vw;
+  grid-template-rows: 15vw;
+  row-gap: 3vw;
+  
+  grid-template-areas: 
+    "nav nav nav"
+    "PageTitle PageTitle PageTitle"
+    "TitleDivider TitleDivider TitleDivider"
+    "DangerSqrImg DangerSqrInfo DangerSqrInfo"
+    "CheckInfo CheckInfo CheckImg"
+    "CheckmateImg CheckmateInfo CheckmateInfo"
+    "StalemateInfo StalemateInfo StalemateImg"
+    "RepetitionImg RepetitionInfo RepetitionInfo"
+    "DeadPositionInfo DeadPositionInfo DeadPositionImg"
+    "FiftyMoveRuleImg FiftyMoveRuleInfo FiftyMoveRuleInfo"
+    "ResignationInfo ResignationInfo ResignationInfo"
+    "TimeoutInfo TimeoutInfo TimeoutInfo"
+    "AgreementInfo AgreementInfo AgreementInfo";
+}
+
+.home-nav{
+  position: relative;
+  top: 10px;
+  left: 10px;
+  height: calc(15vw - 20px);
+}
+
+.strategy-nav{
+  position: relative;
+  top: 10px;
+  left: 20px;
+  height: calc(15vw - 20px);
+}
+  
+.title{
+  font-size: 5.5vw;
+}
+  
+.info{
+  font-size: 3.5vw;
+  width: 60vw
+}
+  
+.rules{
+  font-size: 9vw;
+}
+}
+
+
+
+@media (min-width: 750px){
+/* Main Grid Container (Desktop) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  grid-template-rows: 10vw;
+  
+  grid-template-areas: 
+    "nav nav nav nav"
+    "PageTitle PageTitle PageTitle PageTitle"
+    "TitleDivider TitleDivider TitleDivider TitleDivider"
+    "DangerSqrImg DangerSqrInfo DangerSqrInfo DangerSqrInfo"
+    "CheckInfo CheckInfo CheckInfo CheckImg"
+    "CheckmateImg CheckmateInfo CheckmateInfo CheckmateInfo"
+    "StalemateInfo StalemateInfo StalemateInfo StalemateImg"
+    "RepetitionImg RepetitionInfo RepetitionInfo RepetitionInfo"
+    "DeadPositionInfo DeadPositionInfo DeadPositionInfo DeadPositionImg"
+    "FiftyMoveRuleImg FiftyMoveRuleInfo FiftyMoveRuleInfo FiftyMoveRuleInfo"
+    "ResignationInfo ResignationInfo ResignationInfo ResignationInfo"
+    "TimeoutInfo TimeoutInfo TimeoutInfo TimeoutInfo"
+    "AgreementInfo AgreementInfo AgreementInfo AgreementInfo";
+}
+
+.home-nav{
+  height: calc(10vw - 20px);
+}
+
+.strategy-nav{
+  height: calc(10vw - 20px);
+}
+
+.title{
+  font-size: 4vw;
+}
+  
+.info{
+  font-size: 2.5vw;
+  width: 75vw;
+}
+  
+.rules{
+  font-size: 7vw;
+}
+}
+  
+/* Nav Grids */
+.nav {
+  grid-area: nav;
+}
+
+/* Title Grids */
+.PageTitle {
+  grid-area: PageTitle;
+  text-align: center;
+  margin: auto;
+}
+
+/* Title Divider Grids */
+.TitleDivider {
+  grid-area: TitleDivider;
+}
+
+/* Danger Square Grids */
+.DangerSqrImg {
+  grid-area: DangerSqrImg;
+  align-self: center;
+}
+.DangerSqrInfo {
+  grid-area: DangerSqrInfo;
+  align-self: center;
+}
+
+/* Check Grids */
+.CheckInfo {
+  grid-area: CheckInfo;
+  align-self: center;
+}
+.CheckImg {
+  grid-area: CheckImg;
+  align-self: center;
+}
+
+/* Checkmate Grids */
+.CheckmateImg {
+  grid-area: CheckmateImg;
+  align-self: center;
+}
+.CheckmateInfo {
+  grid-area: CheckmateInfo;
+  align-self: center;
+}
+
+/* Stalemate Grids */
+.StalemateInfo {
+  grid-area: StalemateInfo;
+  align-self: center;
+}
+.StalemateImg {
+  grid-area: StalemateImg;
+  align-self: center;
+}
+
+/* Repetition Grids */
+.RepetitionImg {
+  grid-area: RepetitionImg;
+  align-self: center;
+}
+.RepetitionInfo {
+  grid-area: RepetitionInfo;
+  align-self: center;
+}
+
+/* Dead Position Grids */
+.DeadPositionInfo {
+  grid-area: DeadPositionInfo;
+  align-self: center;
+}
+.DeadPositionImg {
+  grid-area: DeadPositionImg;
+  align-self: center;
+}
+
+/* 50 Move Rule Grids */
+.FiftyMoveRuleImg {
+  grid-area: FiftyMoveRuleImg;
+  align-self: center;
+}
+.FiftyMoveRuleInfo {
+  grid-area: FiftyMoveRuleInfo;
+  align-self: center;
+}
+
+/* Resignation Grids */
+.ResignationInfo {
+  grid-area: ResignationInfo;
+  text-align: center;
+  margin: auto;
+}
+
+/* Timeout Grids */
+.TimeoutInfo {
+  grid-area: TimeoutInfo;
+  text-align: center;
+  margin: auto;
+}
+
+/* Agreement */
+.AgreementInfo {
+  grid-area: AgreementInfo;
+  text-align: center;
+  margin: auto;
+}
+
+
+
+/* Danger Square Cycle */
+.DangerSqrCycle.DangerSqr-1,
+.DangerSqrCycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.DangerSqrCycle.DangerSqr-2,
+.DangerSqrCycle[data-state="2"] {
+  content: url("../img/dangersqr/PawnDangerSqr.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.DangerSqrCycle.DangerSqr-3,
+.DangerSqrCycle[data-state="3"] {
+  content: url("../img/dangersqr/KnightDangerSqr.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.DangerSqrCycle.DangerSqr-4,
+.DangerSqrCycle[data-state="4"] {
+  content: url("../img/dangersqr/BishopDangerSqr.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.DangerSqrCycle.DangerSqr-5,
+.DangerSqrCycle[data-state="5"] {
+  content: url("../img/dangersqr/RookDangerSqr.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.DangerSqrCycle.DangerSqr-6,
+.DangerSqrCycle[data-state="6"] {
+  content: url("../img/dangersqr/QueenDangerSqr.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.DangerSqrCycle.DangerSqr-7,
+.DangerSqrCycle[data-state="7"] {
+  content: url("../img/dangersqr/KingDangerSqr.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Check Cycle */
+.CheckCycle.Check-1,
+.CheckCycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.CheckCycle.Check-2,
+.CheckCycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.CheckCycle.Check-3,
+.CheckCycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Checkmate Cycle */
+.CheckmateCycle.Checkmate-1,
+.CheckmateCycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.CheckmateCycle.Checkmate-2,
+.CheckmateCycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.CheckmateCycle.Checkmate-3,
+.CheckmateCycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Stalemate Cycle */
+.StalemateCycle.Stalemate-1,
+.StalemateCycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.StalemateCycle.Stalemate-2,
+.StalemateCycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.StalemateCycle.Stalemate-3,
+.StalemateCycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Repetition Cycle */
+.RepetitionCycle.Repetition-1,
+.RepetitionCycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.RepetitionCycle.Repetition-2,
+.RepetitionCycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.RepetitionCycle.Repetition-3,
+.RepetitionCycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Dead Position Cycle */
+.DeadPositionCycle.DeadPosition-1,
+.DeadPositionCycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.DeadPositionCycle.DeadPosition-2,
+.DeadPositionCycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.DeadPositionCycle.DeadPosition-3,
+.DeadPositionCycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+
+
+
+/* Dead Position Cycle */
+.FiftyMoveRuleCycle.FiftyMoveRule-1,
+.FiftyMoveRuleCycle[data-state="1"] {
+  content: url("../img/Example.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.FiftyMoveRuleCycle.FiftyMoveRule-2,
+.FiftyMoveRuleCycle[data-state="2"] {
+  content: url("../../piecesmove/KingMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}
+.FiftyMoveRuleCycle.FiftyMoveRule-3,
+.FiftyMoveRuleCycle[data-state="3"] {
+  content: url("../../piecesmove/KnightMoves.png");
+  width: 90%;
+  height: width;
+  margin-left: 5%;
+}

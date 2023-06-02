@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Change this -->
+    <title>Rules | Chess Education</title> 
+    <link rel="tab icon" type="image/png" href="img/ChessRules.png"/>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="stylesheet/rules.css" rel="stylesheet">
+  </head>
+  <body>
+
+
+        <!-- Your content goes here -->
+
+      <div class='grid-container'>
+
+<!-- Nav -->
+          <div class="nav">
+              <a href="../index.html" draggable="false">
+                  <img class="home-nav" draggable="false" src="../Play.png" alt='Home'>
+                </a>
+              <a href='strategy.html' draggable="false">
+                  <img class="strategy-nav" draggable="false" src='img/Strategy.png' alt='Strategy'>
+                </a>
+            </div>
+
+<!-- Title -->
+          <div class='PageTitle'>
+            <div class="rules">Rules</div>
+            </div>
+        
+<!-- Title Divider -->
+          <div class='TitleDivider'>
+            <div class='divider'></div>
+            </div>
+        
+<!-- Danger Squares -->
+          <div class='DangerSqrImg'>
+              <lable class="DangerSqrCycle DangerSqr-1" data-state="1">Danger Squares Example</lable>
+            </div>
+          <div class='DangerSqrInfo'>
+            <h1 class="title">Danger Squares</h1>
+              <h2 class="info">Danger Squares are the squares on the board where a piece can capture another piece. It is illegal for the King to move into any of the opponent's danger squares as it would put him in check.</h2>
+            </div>
+
+<!-- Check -->
+          <div class="CheckImg">
+              <lable class="CheckCycle Check-1" data-state="1">Check Example</lable>
+            </div>
+          <div class="CheckInfo">
+              <h1 class="title" style="text-align: right">Check</h1>
+              <h2 class ="info" style="text-align: right">Check is when the King is put into one of the opponent's danger squares and he IS able to protect himself. When a King is put into check, he is forced to either move out of the danger square, put another one of his pieces in the attacker's way, or capture the attacker if possible.</h2>
+            </div>
+
+<!-- Checkmate -->
+          <div class='CheckmateImg'>
+              <lable class="CheckmateCycle Checkmate-1" data-state="1">Checkmate Example</lable>
+            </div>
+          <div class='CheckmateInfo'>
+              <h1 class="title">Checkmate</h1>
+              <h2 class="info">Checkmate is when the King is put into check but he is NOT able to move to safety or block the attacker. This is counted as a win for the person who delivered the checkmate.</h2>
+            </div>
+
+<!-- Stalemate -->
+          <div class='StalemateImg'>
+              <lable class="StalemateCycle Stalemate-1" data-state="1">Stalemate Example</lable>
+            </div>
+          <div class='StalemateInfo'>
+              <h1 class="title" style="text-align: right">Stalemate</h1>
+              <h2 class="info" style="text-align: right">Stalemate is when a player is unable to make any legal moves. This commonly happens when the player has no pieces left besides their King and the only place he can move is a Danger Square. This is counted as a draw for both players however, the player who dealt the stalemate is considered to have lost.</h2>
+            </div>
+
+<!-- Repetition -->
+          <div class='RepetitionImg'>
+              <lable class="RepetitionCycle Repetition-1" data-state="1">Repetition Example</lable>
+            </div>
+          <div class='RepetitionInfo'>
+              <h1 class="title">Repetition</h1>
+              <h2 class="info">Repetition is when the same position is reached three times in a row. This is counted as a draw for both players.</h2>
+            </div>
+
+<!-- Dead Position -->
+          <div class='DeadPositionImg'>
+              <lable class="DeadPositionCycle DeadPosition-1" data-state="1">Dead Position Example</lable>
+            </div>
+          <div class='DeadPositionInfo'>
+              <h1 class="title" style="text-align: right">Dead Position</h1>
+              <h2 class="info" style="text-align: right">A Dead Position is when both players don't have enough pieces to deliver a checkmate to the other. This is counted as a draw for both players.</h2>
+            </div>
+
+<!-- 50 Move Rule -->
+          <div class='FiftyMoveRuleImg'>
+              <lable class="FiftyMoveRuleCycle FiftyMoveRule-1" data-state="1">50 Move Rule Example</lable>
+            </div>
+          <div class='FiftyMoveRuleInfo'>
+              <h1 class="title">50 Move Rule</h1>
+              <h2 class="info">The 50 Move Rule is when 50 moves in a row are made in a game without a capture or a pawn movement. This is counted as a draw for both players.</h2>
+            </div>
+
+<!-- Resignation -->
+          <div class='ResignationInfo'>
+              <h1 class="title">Resignation</h1>
+              <h2 class="info">Resignation is when either player forfeits the game by admitting defeat. This ends the game and grants a win for the opposing player.</h2>
+            </div>
+
+<!-- Timeout -->
+          <div class='TimeoutInfo'>
+              <h1 class="title">Timeout</h1>
+              <h2 class="info">Most professional and casual chess games are played with a clock in which each player has a certain amount of time for their moves. A player's time only counts down when it is their turn to play. Timeout is when a player runs out of time in the game. This ends the game and counts as a loss for that player.</h2>
+            </div>
+
+<!-- Agreement -->
+          <div class='AgreementInfo'>
+              <h1 class="title">Agreement</h1>
+              <h2 class="info">Agreement is when both players agree to stop playing for any reason. This ends the game and counts as a draw for both players.</h2>
+            </div>
+        
+      </div>
+
+
+
+    <script src="js/rules.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ECM44L3KNM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ECM44L3KNM');
+</script>
+    
+
+<!-- don't change these -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

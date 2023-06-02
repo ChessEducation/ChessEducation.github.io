@@ -1,0 +1,43 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #464646;
+  user-select: none;
+}
+
+.home-nav{
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.rules-nav{
+  position: absolute;
+  top: 100px;
+  left: 10px;
+}
+
+div.strategy-nav{
+  position: absolute;
+  top: 190px;
+  left: 3px;
+}
+
+/* Main Grid Container (Desktop) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 105px calc(100vw - 110px);
+  grid-template-rows: calc(100vh - 4px);
+  
+  grid-template-areas: 
+    "nav chessAI";
+}
+  
+/* Nav Grids */
+.nav {
+  grid-area: nav;
+}
+
+.chessAI {
+  grid-area: chessAI;
+}
